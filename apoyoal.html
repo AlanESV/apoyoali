@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical Color-Adapting CSS Menu</title>
+  <link rel="stylesheet" media="all" href="alimentos.css">
+  <style>
+    .img-tamano-fijo {
+      width: 150px; /* Ancho fijo para todas las imágenes */
+            height: 90%px; /* Alto fijo para todas las imágenes */
+            object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo las proporciones */
+            border-radius: 10%; /* Hace que los bordes de la imagen sean circulares */
+            max-width: 100%; /* Asegura que la imagen no supere el ancho del contenedor */
+            height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+ body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('1736992032915.png'); /* Ruta de la imagen */
+            background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-attachment:scroll; /* Hace que la imagen no se mueva al hacer scroll */
+    background-position: center center; /* Centra la imagen */
+            background-repeat: repeat; /* Hace que la imagen se repita */
+            
+            opacity: 0.4; /* Ajusta la opacidad de la imagen de fondo (0 es completamente transparente, 1 es opaco) */
+            z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+        }
+
+  </style>
+</head>
+<body>
+  <header style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; text-align: center; padding: 50px 20px; border-radius: 10px; margin-bottom: 30px;">
+    <h1 style="font-size: 48px; font-family: 'Arial', sans-serif; margin-bottom: 10px;">¡Bienvenido a tu espacio de nutrición!</h1>
+    <p style="font-size: 20px; line-height: 1.5; font-family: 'Arial', sans-serif;">
+      Aquí puedes gestionar tus alimentos, monitorear tu ingesta nutricional y obtener recomendaciones personalizadas para una alimentación equilibrada.
+    </p>
+    <a href="#menu-container" style="display: inline-block; background: white; color: #4facfe; font-size: 18px; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 20px; font-weight: bold;">
+      Comienza Ahora
+    </a>
+    <a href="vids.html" style="display: inline-block; background: #ff8c00; color: white; font-size: 18px; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 20px; font-weight: bold;">
+      Extras
+    </a>
+  </header>
+  
+        </div> <!-- .container -->
+      </div> <!-- .banner-section -->
+    </div> <!-- .page-banner -->
+
+    <div id="disclaimer" style="background-color: #f8d7da; color: #842029; padding: 15px; border: 1px solid #f5c2c7; border-radius: 5px; margin: 20px 0; font-size: 16px;">
+      <strong>Nota:</strong> Recuerda que esta página es solo una herramienta de ayuda y no reemplaza el consejo de un experto en nutrición. Para una evaluación más precisa, consulta a un profesional de la salud.
+    </div>
+    
+    
+   <div id="menu-container">
+      <div id="menu-wrapper">
+         <div id="hamburger-menu"><span></span><span></span><span></span></div>
+         <!-- hamburger-menu -->
+      </div>
+      <!-- menu-wrapper -->
+      
+      <ul class="menu-list accordion">
+         <li id="nav1" class="toggle accordion-toggle"> 
+            <span class="icon-plus"></span>
+            <a class="menu-link" href="#">Agregados</a>
+         </li>
+         <!-- accordion-toggle -->
+         <ul class="menu-submenu accordion-content">
+            <li><a class="head submenu-link" data-title="Sal" data-img="sal" href="#">Sal</a></li>
+            <li><a class="head submenu-link" data-title="Azucar" data-img="azucar" href="#">Azucar</a></li>
+            <li><a class="head submenu-link" data-title="Estevia" data-img="stevia" href="#">Estevia</a></li>
+            <li><a class="head submenu-link" data-title="Jamon" data-img="jamon" href="#">Jamon</a></li>
+            <li><a class="head submenu-link" data-title="Catsup" data-img="catsup" href="#">Catsup</a></li>
+            <li><a class="head submenu-link" data-title="Mantequilla" data-img="mantequilla" href="#">Mantequilla</a></li>
+            <li><a class="head submenu-link" data-title="MantecadeCerdo" data-img="manteca" href="#">Manteca De Cerdo</a></li>
+            <li><a class="head submenu-link" data-title="AceiteVegetal" data-img="aceite" href="#">Aceite Vegetal</a></li>
+            <li><a class="head submenu-link" data-title="Mayonesa" data-img="mayonesa" href="#">Mayonesa</a></li>
+            <li><a class="head submenu-link" data-title="Mostaza" data-img="mostaza" href="#">Mostaza</a></li>
+            <li><a class="head submenu-link" data-title="MermeladadeFresa" data-img="mermelada" href="#">Mermelada De Fresa</a></li>
+            <li><a class="head submenu-link" data-title="TortilladeMaíz" data-img="tortilla" href="#">Tortilla De Maíz</a></li>
+            <li><a class="head submenu-link" data-title="TortilladeHarina" data-img="tortillas" href="#">Tortilla De Harina</a></li>
+         </ul>
+
+         <li id="nav2" class="toggle accordion-toggle"> 
+          <span class="icon-plus"></span>
+          <a class="menu-link" href="#">Platillos</a>
+       </li>
+       <!-- accordion-toggle -->
+       <ul class="menu-submenu accordion-content">
+          <li><a class="head submenu-link" data-title="ClubSandwich" data-img="clubsandwich" href="#">Club sandwich</a></li>
+          <li><a class="head submenu-link" data-title="Dumplings" data-img="dumplings" href="#">Dumplings</a></li>
+          <li><a class="head submenu-link" data-title="Empanada" data-img="Empanada" href="#">Empanada</a></li>
+          <li><a class="head submenu-link" data-title="Ensalada" data-img="ensaladita1" href="#">Ensalada</a></li>
+          <li><a class="head submenu-link" data-title="Tortadepierna" data-img="tortapierna" href="#">Torta de pierna</a></li>
+          <li><a class="head submenu-link" data-title="EnsaladaGriega" data-img="ensaladita" href="#">Ensalada griega</a></li>
+          <li><a class="head submenu-link" data-title="EspaguetisalaBoloñesa" data-img="bolognessa" href="#">Espaguetis A La Boloñesa</a></li>
+          <li><a class="head submenu-link" data-title="Milanesa" data-img="Milanesa" href="#">Milanesa</a></li>
+          <li><a class="head submenu-link" data-title="Hamburguesa" data-img="hamburguesa" href="#">Hamburguesa</a></li>
+          <li><a class="head submenu-link" data-title="HamburguesadeQuesoconTocino" data-img="hamburguesatocino" href="#">Hamburguesa De Queso Con Tocino</a></li>
+          <li><a class="head submenu-link" data-title="Huevo" data-img="huevos" href="#">Huevo</a></li>
+          <li><a class="head submenu-link" data-title="RamenMaruchan" data-img="maruchan" href="#">Ramen Maruchan</a></li>
+          <li><a class="head submenu-link" data-title="MacarronesconQueso" data-img="macarrones" href="#">Macarrones Con Queso</a></li>
+          <li><a class="head submenu-link" data-title="PizzadePepperoni" data-img="pizzapepperoni" href="#">Pizza de Pepperoni</a></li>
+          <li><a class="head submenu-link" data-title="PizzadeQueso" data-img="pizzaqueso" href="#">Pizza De Queso</a></li>
+       </ul>
+
+         <li id="nav3" class="toggle accordion-toggle"> 
+          <span class="icon-plus"></span>
+          <a class="menu-link" href="#">Carnes</a>
+       </li>
+       <!-- accordion-toggle -->
+       <ul class="menu-submenu accordion-content">
+          <li><a class="head submenu-link" data-title="Chorizo" data-img="Chorizo" href="#">Chorizo</a></li>
+          <li><a class="head submenu-link" data-title="Tocino" data-img="Tocino" href="#">Tocino</a></li>
+          <li><a class="head submenu-link" data-title="Bistec" data-img="cerdo" href="#">Bistec</a></li>
+          <li><a class="head submenu-link" data-title="AtunenAgua" data-img="atun" href="#">Atún En Agua</a></li>
+          <li><a class="head submenu-link" data-title="FiletedeCerdo" data-img="filete" href="#">Filete De Cerdo</a></li>
+          <li><a class="head submenu-link" data-title="PescadoFrito" data-img="pezfrito" href="#">Pescado Frito</a></li>
+       </ul>
+         <!-- menu-submenu accordion-content-->
+         <li id="nav4" class="toggle accordion-toggle"> 
+            <span class="icon-plus"></span>
+            <a class="menu-link" href="#">Bebidas</a>
+         </li>
+         <!-- accordion-toggle -->
+         <ul class="menu-submenu accordion-content">
+            <li><a class="head submenu-link" data-title="CafeconCrema" data-img="cafecrema" href="#">Café con crema</a></li>
+            <li><a class="head submenu-link" data-title="Cafeexpresso" data-img="cafeexpreso" href="#">Café expresso</a></li>
+            <li><a class="head submenu-link" data-title="Cerveza" data-img="Cerveza" href="#">Cerveza</a></li>
+            <li><a class="head submenu-link" data-title="ChocolateconLeche" data-img="Chocolate" href="#">Chocolate con leche</a></li>
+            <li><a class="head submenu-link" data-title="CocaCola" data-img="cocacola" href="#">Coca cola</a></li>
+            <li><a class="head submenu-link" data-title="BatidoVerde" data-img="jugoverde" href="#">Batido Verde</a></li>
+            <li><a class="head submenu-link" data-title="BebidaEnergética" data-img="bebidaenergetica" href="#">Bebida Energética</a></li>
+            <li><a class="head submenu-link" data-title="Leche" data-img="leche" href="#">Leche</a></li>
+            <li><a class="head submenu-link" data-title="LechedeSoja" data-img="lechesoja" href="#">Leche de Soja</a></li>
+            <li><a class="head submenu-link" data-title="TeNegro" data-img="te" href="#">Té Negro</a></li>
+            <li><a class="head submenu-link" data-title="ZumodeNaranja" data-img="naranja" href="#">Zumo De Naranja</a></li>
+         </ul>
+         <!-- menu-submenu accordion-content-->
+         <li id="nav5" class="toggle accordion-toggle"> 
+            <span class="icon-plus"></span>
+            <a class="menu-link" href="#">Postres</a>
+         </li>
+         <!-- accordion-toggle -->
+         <ul class="menu-submenu accordion-content">
+            <li><a class="head submenu-link" data-title="Cereal" data-img="cereal1" href="#">Cereal</a></li>
+            <li><a class="head submenu-link" data-title="Cocteldefrutas" data-img="frutas" href="#">Coctel de frutas</a></li>
+            <li><a class="head submenu-link" data-title="CremaBatida" data-img="cremabatida" href="#">Crema batida</a></li>
+            <li><a class="head submenu-link" data-title="CremadeCafe" data-img="cremacafe" href="#">Crema De Café</a></li>
+            <li><a class="head submenu-link" data-title="BarradeHelado" data-img="helado" href="#">Barra de Helado</a></li>
+            <li><a class="head submenu-link" data-title="BarritadeGranola" data-img="barrita" href="#">Barrita de Granola</a></li>
+            <li><a class="head submenu-link" data-title="CacaoSoluble" data-img="chocolate1" href="#">Cacao Soluble</a></li>
+            <li><a class="head submenu-link" data-title="Flan" data-img="flan" href="#">Flan</a></li>
+            <li><a class="head submenu-link" data-title="GalletaconTrocitosdeChocolate" data-img="galletas" href="#">Galleta Con Trocitos De Chocolate</a></li>
+            <li><a class="head submenu-link" data-title="GalletaMaria" data-img="marias" href="#">Galleta maria</a></li>
+            <li><a class="head submenu-link" data-title="Mango" data-img="mango" href="#">Mango</a></li>
+            <li><a class="head submenu-link" data-title="Manzana" data-img="manzana" href="#">Manzana</a></li>
+            <li><a class="head submenu-link" data-title="Platano" data-img="platano" href="#">Platano</a></li>
+            <li><a class="head submenu-link" data-title="Muffin" data-img="muffin" href="#">Muffin</a></li>
+            <li><a class="head submenu-link" data-title="RosquillaKrispyKreme" data-img="donaglaseada" href="#">Dona</a></li>
+         </ul>
+         <!-- menu-submenu accordion-content-->
+      </ul>
+      <!-- menu-list accordion-->
+   </div>
+   <!-- menu-container -->
+   
+   <div id="submenu-detail">
+       <!-- Aquí se mostrará la información del submenú seleccionado -->
+   </div>
+
+   
+
+   <div id="added-items">
+      <h3>Items Añadidos:</h3>
+      <ul id="added-items-list"></ul>
+      <br><br><br><br>
+      <div id="results">
+        <h2>Resultados de la Nutrición</h2>
+        <div id="nutritionResults"></div>
+        <div id="recommendations"></div>
+    </div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="calorias.js"></script>
+</body>
+</html>
